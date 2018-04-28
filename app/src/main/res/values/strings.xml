@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BucharestTourGuide</string>
+
+    <string name="restaurants">Restaurants</string>
+    <string name="hotels">Hotels</string>
+    <string name="parks">Parks</string>
+    <string name="museums">Museums</string>
+
 </resources>
