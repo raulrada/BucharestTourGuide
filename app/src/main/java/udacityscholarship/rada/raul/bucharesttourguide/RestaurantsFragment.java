@@ -22,9 +22,7 @@ public class RestaurantsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_hotels, container, false);
-        TextView fragmentText = (TextView)rootView.findViewById(R.id.fragment_text);
-        fragmentText.setText("Restaurants");
+        View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         return rootView;
     }

@@ -41,5 +41,4 @@ public class AttractionAdapter extends FragmentPagerAdapter {
         else return mContext.getString(R.string.parks);
     }
 
-
 }

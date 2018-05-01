@@ -24,9 +24,7 @@ public class HotelsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_hotels, container, false);
-        TextView fragmentText = (TextView)rootView.findViewById(R.id.fragment_text);
-        fragmentText.setText("Hotels");
+        View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         return rootView;
     }
