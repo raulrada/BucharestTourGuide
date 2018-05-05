@@ -19,10 +19,10 @@
     <dimen name="text_list_title_margin_bottom">5dp</dimen>
 
     <dimen name="text_list_regular_size">14sp</dimen>
-    <dimen name="text_list_regular_margin_start">5dp</dimen>
-    <dimen name="text_list_regular_margin_end">10dp</dimen>
-    <dimen name="text_list_regular_margin_top">5dp</dimen>
-    <dimen name="text_list_regular_margin_bottom">5dp</dimen>
+    <dimen name="text_list_margin_start">5dp</dimen>
+    <dimen name="text_list_margin_end">10dp</dimen>
+    <dimen name="text_list_margin_top">5dp</dimen>
+    <dimen name="text_list_margin_bottom">5dp</dimen>
 
     <dimen name="linear_layout_list_regular_margin_start">5dp</dimen>
     <dimen name="linear_layout_list_regular_margin_end">5dp</dimen>

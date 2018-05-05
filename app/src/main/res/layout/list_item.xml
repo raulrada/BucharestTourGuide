@@ -19,23 +19,27 @@
     
     <LinearLayout
         android:layout_width="@dimen/no_width"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="1"
+        android:layout_gravity="center_vertical"
         android:gravity="center">
 
         <TextView
             android:id="@+id/list_title"
-            style="@style/TextAppearance.TourGuideApp"
+            style="@style/TextStyle.listItem.title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="@dimen/text_list_title_size"
-            android:layout_marginStart="@dimen/text_list_title_margin_start"
-            android:layout_marginEnd="@dimen/text_list_title_margin_end"
-            android:layout_marginTop="@dimen/text_list_title_margin_top"
-            android:layout_marginBottom="@dimen/text_list_title_margin_bottom"
             tools:text="Carol Park"/>
+
+        <TextView
+            android:id="@+id/type"
+            style="@style/TextStyle.listItem.regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="Type:"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,7 +89,7 @@
         </LinearLayout>
 
         <TextView
-            style="@style/TextAppearance.TourGuideApp"
+            style="@style/TextStyle.listItem.regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

@@ -8,8 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="TextAppearance.TourGuideApp" parent="@style/TextAppearance.AppCompat">
+    <style name="TextStyle" parent="@style/TextAppearance.AppCompat">
         <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextStyle.listItem">
+        <item name="android:layout_marginStart">@dimen/text_list_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/text_list_margin_end</item>
+        <item name="android:layout_marginTop">@dimen/text_list_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/text_list_margin_bottom</item>
+    </style>
+
+    <style name="TextStyle.listItem.regular">
+        <item name="android:textSize">@dimen/text_list_regular_size</item>
+    </style>
+
+    <style name="TextStyle.listItem.title">
+        <item name="android:textSize">@dimen/text_list_title_size</item>
     </style>
 
 </resources>
