@@ -6,6 +6,9 @@
     <string name="parks">Parks</string>
     <string name="museums">Museums</string>
 
+    <string name="type_list">Type: %1$s</string>
+    <string name="open_list">Open: %1$s</string>
+
     <string name="ior_name">Alexandru Ioan Cuza Park</string>
     <string name="ior_since">1970</string>
     <string name="ior_size">85 ha</string>
@@ -53,9 +56,6 @@
     <string name="vacaresti_size">190 ha</string>
     <string name="vacaresti_geo">geo:44.405086, 26.131094</string>
     <string name="vacaresti_opening">24 hours</string>
-
-    <string name="type_list">Type: %1$s</string>
-    <string name="open_list">Open: %1$s</string>
 
     <string name="hotel_opening">24 hours</string>
 
@@ -109,7 +109,7 @@
 
     <string name="antipa_name">Antipa Museum</string>
     <string name="antipa_type">Natural history museum</string>
-    <string name="antipa_opening">10:00 &#8211; 18:00,\nTuesday - Sunday</string>
+    <string name="antipa_opening">10:00 &#8211; 18:00,\nTuesday &#8211; Sunday</string>
     <string name="antipa_address">1 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
     <string name="antipa_phone">021 312 8826</string>
     <string name="antipa_web">antipa.ro</string>
@@ -117,7 +117,7 @@
 
     <string name="history_name">National Museum of Romanian History</string>
     <string name="history_type">History museum</string>
-    <string name="history_opening">09:00 &#8211; 17:00,\nWednesday - Sunday</string>
+    <string name="history_opening">09:00 &#8211; 17:00,\nWednesday &#8211; Sunday</string>
     <string name="history_address">12 Calea Victoriei, Bucharest 030026</string>
     <string name="history_phone">021 315 8207</string>
     <string name="history_web">mnir.ro</string>
@@ -125,7 +125,7 @@
 
     <string name="art_name">The National Museum of Art of Romania</string>
     <string name="art_type">Art museum</string>
-    <string name="art_opening">10:00 &#8211; 18:00,\nWednesday - Sunday</string>
+    <string name="art_opening">10:00 &#8211; 18:00,\nWednesday &#8211; Sunday</string>
     <string name="art_address">49&#8211;53 Calea Victoriei, Bucharest 010063</string>
     <string name="art_phone">021 313 3030</string>
     <string name="art_web">mnar.arts.ro</string>
@@ -133,18 +133,60 @@
 
     <string name="sat_name">\"Dimitrie Gusti\" National Village Museum</string>
     <string name="sat_type">Ethnographic museum</string>
-    <string name="sat_opening">09:00 &#8211; 19:00,\nMonday - Sunday</string>
+    <string name="sat_opening">09:00 &#8211; 19:00,\nMonday &#8211; Sunday</string>
     <string name="sat_address">28&#8211;30, Pavel Dimitrievici Kiseleff Road, Bucharest 011347</string>
     <string name="sat_phone">021 317 9103</string>
     <string name="sat_web">muzeul-satului.ro</string>
     <string name="sat_geo">geo:44.472336, 26.076505</string>
 
-    <string name="taran_name">\Museum of the Romanian Peasant</string>
+    <string name="taran_name">Museum of the Romanian Peasant</string>
     <string name="taran_type">Heritage museum</string>
-    <string name="taran_opening">09:00 &#8211; 17:00,\nTuesday - Sunday</string>
+    <string name="taran_opening">09:00 &#8211; 17:00,\nTuesday &#8211; Sunday</string>
     <string name="taran_address">3 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
     <string name="taran_phone">021 317 9661</string>
     <string name="taran_web">muzeultaranuluiroman.ro</string>
     <string name="taran_geo">geo:44.472336, 26.076505</string>
+
+    <string name="caru_name">Caru\' cu Bere</string>
+    <string name="caru_type">Romanian food</string>
+    <string name="caru_opening">08:00 &#8211; 00:00,\nSunday &#8211; Thursday,\n8:00 &#8211; 02:00,
+        \nFriday &#8211; Saturday</string>
+    <string name="caru_address">3 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
+    <string name="caru_phone">021 317 9661</string>
+    <string name="caru_web">carucubere.ro</string>
+    <string name="caru_geo">geo:44.472336, 26.076505</string>
+
+    <string name="curtea_name">Curtea Berarilor</string>
+    <string name="curtea_type">Romanian food</string>
+    <string name="curtea_opening">13:00 &#8211; 01:00,\nMonday &#8211; Wednesday,\n13:00 &#8211; 04:00,
+        \nThursday &#8211; Saturday,\n12:00 &#8211; 00:00,\nSunday</string>
+    <string name="curtea_address">9&#8211;11 Selari Steet, Bucharest 030167</string>
+    <string name="curtea_phone">021 313 7532</string>
+    <string name="curtea_web">curteaberarilor.com</string>
+    <string name="curtea_geo">geo:44.430597, 26.100779</string>
+
+    <string name="pescarus_name">Restaurant Pescarus</string>
+    <string name="pescarus_type">International</string>
+    <string name="pescarus_opening">08:00 &#8211; 00:00,\nMonday &#8211; Sunday</string>
+    <string name="pescarus_address">Aleea Pescarus, Bucharest</string>
+    <string name="pescarus_phone">0731 330 034</string>
+    <string name="pescarus_web">restaurantpescarus.ro</string>
+    <string name="pescarus_geo">geo:44.472606, 26.085734</string>
+
+    <string name="buon_name">Trattoria Buongiorno Arena</string>
+    <string name="buon_type">Italian food</string>
+    <string name="buon_opening">08:00 &#8211; 00:00,\nMonday &#8211; Sunday</string>
+    <string name="buon_address">37&#8211;39 Basarabia Boulevard, Bucharest 022103</string>
+    <string name="buon_phone">0731 037 387</string>
+    <string name="buon_web">trattoriabuongiorno.ro</string>
+    <string name="buon_geo">geo:44.433558, 26.153660</string>
+
+    <string name="zen_name">Zen Garden</string>
+    <string name="zen_type">Chinese food</string>
+    <string name="zen_opening">08:00 &#8211; 00:00,\nMonday &#8211; Sunday</string>
+    <string name="zen_address">3 Silvestru Street, Bucharest 030167</string>
+    <string name="zen_phone">0787 823 134</string>
+    <string name="zen_web">zen-garden-restaurant.ro</string>
+    <string name="zen_geo">geo:44.440305, 26.112175</string>
 
 </resources>

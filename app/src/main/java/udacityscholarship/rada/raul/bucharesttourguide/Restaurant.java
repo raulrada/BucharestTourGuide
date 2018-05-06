@@ -1,16 +1,17 @@
 package udacityscholarship.rada.raul.bucharesttourguide;
 
 /**
- * {@link Museum} represents a Museum about which the user can find more information.
- * The class extends {@link Attraction}, providing some fields that are relevant only for Museums
+ * {@link Restaurant} represents a Restaurant about which the user can find more information.
+ * The class extends {@link Attraction}, providing some fields that are relevant only for Restaurant
  */
-public class Museum extends Attraction{
+public class Restaurant extends Attraction{
 
-    //no individual large pic for museum available; the museum_vector asset is used for all museum.
-    private static final int LARGE_PIC = R.drawable.museum_vector;
+    //no individual large pic for restaurants available; the restaurant_vector asset is used
+    // for all restaurants.
+    private static final int LARGE_PIC = R.drawable.restaurant_vector;
 
     /**
-     * Museum object constructor
+     * Restaurant object constructor
      * @param nameId String resource ID for Museum name
      * @param openingHoursId String resource ID for Museum opening hours
      * @param geoId String resource ID for Museum GPS coordinates
@@ -19,7 +20,7 @@ public class Museum extends Attraction{
      * @param phoneNumberId ID of Museum phone number
      * @param typeId ID of Museum type
      */
-    public Museum(int nameId, int openingHoursId, int geoId, int addressId, int webAddressId, int phoneNumberId, int typeId){
+    public Restaurant(int nameId, int openingHoursId, int geoId, int addressId, int webAddressId, int phoneNumberId, int typeId){
         this.setLargePicId(LARGE_PIC);
         this.setNameId(nameId);
         this.setOpeningHoursId(openingHoursId);
