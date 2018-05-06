@@ -72,9 +72,39 @@
     <string name="michelangelo_geo">geo:44.448637, 26.091872</string>
 
     <string name="ramada_name">Ramada Parc Hotel</string>
-    <string name="ramada_address">3-5 B Poligrafiei Avenue, Bucharest 013704</string>
+    <string name="ramada_address">3&#8211;5 B Poligrafiei Avenue, Bucharest 013704</string>
     <string name="ramada_phone">021 549 2000</string>
     <string name="ramada_web">wyndhamhotels.com</string>
     <string name="ramada_geo">geo:44.479988, 26.063516</string>
+
+    <string name="athenee_name">Athenee Palace Hilton Bucharest</string>
+    <string name="athenee_address">1&#8211;3 Episcopiei Street, Bucharest 010292</string>
+    <string name="athenee_phone">021 303 3777</string>
+    <string name="athenee_web">hilton.com</string>
+    <string name="athenee_geo">geo:44.440931, 26.095772</string>
+
+    <string name="crowne_name">Crowne Plaza Bucharest</string>
+    <string name="crowne_address">1 Poligrafiei Boulevard, Bucharest 013704</string>
+    <string name="crowne_phone">021 224 0034</string>
+    <string name="crowne_web">ihg.com</string>
+    <string name="crowne_geo">geo:44.479590, 26.064300</string>
+
+    <string name="radisson_name">Radisson Blu Hotel</string>
+    <string name="radisson_address">63&#8211;81 Calea Victoriei, Bucharest 030165</string>
+    <string name="radisson_phone">021 311 9000</string>
+    <string name="radisson_web">radissonblu.com</string>
+    <string name="radisson_geo">geo:44.479590, 26.064300</string>
+
+    <string name="antique_name">Antique Hostel Bucharest</string>
+    <string name="antique_address">Splaiul Independentei, Bucharest 030167</string>
+    <string name="antique_phone">031 425 8519</string>
+    <string name="antique_web">n/a</string>
+    <string name="antique_geo">geo:44.429642, 26.099758</string>
+
+    <string name="carpati_name">Hotel Carpati Imparatul Romanilor</string>
+    <string name="carpati_address">16 Matei Millo Street, Bucharest 010145</string>
+    <string name="carpati_phone">021 315 0140</string>
+    <string name="carpati_web">imparatulromanilor.ro</string>
+    <string name="carpati_geo">geo:44.436369, 26.095076</string>
 
 </resources>

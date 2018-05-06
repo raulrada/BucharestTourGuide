@@ -1,26 +1,19 @@
 package udacityscholarship.rada.raul.bucharesttourguide;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HotelsFragment extends Fragment {
 
-    // constants showing the number of stars of each Hotel in the list
-    private final int MARRIOT_STARS = 5;
-    private final int MICHELANGELO_STARS = 3;
-    private final int RAMADA_STARS = 4;
+
 
     public HotelsFragment() {
         // Required empty public constructor
@@ -53,6 +46,16 @@ public class HotelsFragment extends Fragment {
      * @return ArrayList<Attraction> containing Hotel objects
      */
     public ArrayList<Attraction> generateHotels() {
+        // constants showing the number of stars of each Hotel in the list
+        final int MARRIOT_STARS = 5;
+        final int MICHELANGELO_STARS = 3;
+        final int RAMADA_STARS = 4;
+        final int ATHENEE_STARS = 5;
+        final int CROWNE_STARS = 4;
+        final int RADISSON_STARS = 5;
+        final int ANTIQUE_STARS = 2;
+        final int CARPATI_STARS = 1;
+
         ArrayList<Attraction> hotels = new ArrayList<Attraction>();
         hotels.add(new Hotel(R.string.marriot_name, R.string.marriot_geo, R.string.marriot_address,
                 MARRIOT_STARS, R.string.marriot_web, R.string.marriot_phone));
@@ -60,6 +63,16 @@ public class HotelsFragment extends Fragment {
                 MICHELANGELO_STARS, R.string.michelangelo_web, R.string.michelangelo_phone));
         hotels.add(new Hotel(R.string.ramada_name, R.string.ramada_geo, R.string.ramada_address,
                 RAMADA_STARS, R.string.ramada_web, R.string.ramada_phone));
+        hotels.add(new Hotel(R.string.athenee_name, R.string.athenee_geo, R.string.athenee_address,
+                ATHENEE_STARS, R.string.athenee_web, R.string.athenee_phone));
+        hotels.add(new Hotel(R.string.crowne_name, R.string.crowne_geo, R.string.crowne_address,
+                CROWNE_STARS, R.string.crowne_web, R.string.crowne_phone));
+        hotels.add(new Hotel(R.string.radisson_name, R.string.radisson_geo, R.string.radisson_address,
+                RADISSON_STARS, R.string.radisson_web, R.string.radisson_phone));
+        hotels.add(new Hotel(R.string.antique_name, R.string.antique_geo, R.string.antique_address,
+                ANTIQUE_STARS, R.string.antique_web, R.string.antique_phone));
+        hotels.add(new Hotel(R.string.carpati_name, R.string.carpati_geo, R.string.carpati_address,
+                CARPATI_STARS, R.string.carpati_web, R.string.carpati_phone));
         return hotels;
     }
 }
