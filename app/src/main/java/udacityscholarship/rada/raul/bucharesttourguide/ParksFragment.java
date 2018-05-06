@@ -44,7 +44,7 @@ public class ParksFragment extends Fragment {
 
     /**
      * Generates list of Parks
-     * @return ArrayList<Park> containing Park objects
+     * @return ArrayList<Attraction> containing Park objects
      */
     public ArrayList<Attraction> generateParks(){
         ArrayList<Attraction> parks = new ArrayList<Attraction>();

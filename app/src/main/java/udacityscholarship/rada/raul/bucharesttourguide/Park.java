@@ -2,11 +2,9 @@ package udacityscholarship.rada.raul.bucharesttourguide;
 
 /**
  * {@link Park} represents a Park about which the user can find more information.
- * The class implements {@link Attraction}, providing some fields that are relevant only for Parks
+ * The class extends {@link Attraction}, providing some fields that are relevant only for Parks
  */
 public class Park extends Attraction {
-
-
 
     /**
      * Park object constructor

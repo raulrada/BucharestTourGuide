@@ -24,6 +24,15 @@ abstract class Attraction {
     /** constant value showing whether the {@link Attraction} is classified by star number */
     private static final int NO_STARS = -1;
 
+    /** constant value showing whether the {@link Attraction} is classified by star number */
+    private static final int NO_ADDRESS = -1;
+
+    /** constant value showing whether the {@link Attraction} has a phone number */
+    private static final int NO_PHONE = -1;
+
+    /** constant value showing whether the {@link Attraction} has a web address */
+    private static final int NO_WEB = -1;
+
     /** String resource ID for {@link Attraction} name */
     private int mNameId;
 
@@ -50,6 +59,15 @@ abstract class Attraction {
 
     /** int showing the number of stars to which the {@link Attraction} is classified */
     private int mStarsNumber = NO_STARS;
+
+    /** String resource ID for {@link Attraction} address */
+    private int mAddressId = NO_ADDRESS;
+
+    /** String resource ID for {@link Attraction} phone number */
+    private int mPhoneNumberId = NO_PHONE;
+
+    /** String resource ID for {@link Attraction} web address */
+    private int mWebAddressId = NO_WEB;
 
     /**
      * setter method for nameId
@@ -173,7 +191,7 @@ abstract class Attraction {
     }
 
     /**
-     * setter method for geoId
+     * setter method for number of stars
      * @param starsNumber the number of stars of the {@link Attraction}
      */
     public void setStarsNumber (int starsNumber){
@@ -185,6 +203,53 @@ abstract class Attraction {
      */
     public int getStarsNumber(){
         return mStarsNumber;
+    }
+
+    /**
+     * setter method for address Id
+     * @param addressId identifies the String resource containing the address of the {@link Attraction}
+     */
+    public void setAddressId (int addressId){
+        mAddressId = addressId;
+    }
+
+    /**
+     * @return the id of String resource containing the address of the {@link Attraction}
+     */
+    public int getAddressId(){
+        return mAddressId;
+    }
+
+    /**
+     * setter method for phone number ID
+     * @param phoneNumberId identifies the String resource containing the phone number of the
+     * {@link Attraction}
+     */
+    public void setPhoneNumberId (int phoneNumberId){
+        mPhoneNumberId = phoneNumberId;
+    }
+
+    /**
+     * @return the id of String resource containing the phone number of the {@link Attraction}
+     */
+    public int getPhoneNumberId(){
+        return mPhoneNumberId;
+    }
+
+    /**
+     * setter method for phone number ID
+     * @param webAddressId identifies the String resource containing the web address of the
+     * {@link Attraction}
+     */
+    public void setWebAddressId (int webAddressId){
+        mWebAddressId = webAddressId;
+    }
+
+    /**
+     * @return the id of String resource containing the web address of the {@link Attraction}
+     */
+    public int getWebAddressId(){
+        return mWebAddressId;
     }
 
     /**
@@ -220,5 +285,26 @@ abstract class Attraction {
      */
     public boolean hasStars(){
         return mStarsNumber != NO_STARS;
+    }
+
+    /**
+     * @return whether the {@link Attraction} has address provided
+     */
+    public boolean hasAddress(){
+        return mAddressId != NO_ADDRESS;
+    }
+
+    /**
+     * @return whether the {@link Attraction} has a phone number provided
+     */
+    public boolean hasPhoneNumber(){
+        return mPhoneNumberId != NO_PHONE;
+    }
+
+    /**
+     * @return whether the {@link Attraction} has a web address provided
+     */
+    public boolean hasWebAddress(){
+        return mWebAddressId != NO_WEB;
     }
 }

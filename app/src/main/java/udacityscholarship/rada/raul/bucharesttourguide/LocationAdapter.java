@@ -3,6 +3,7 @@ package udacityscholarship.rada.raul.bucharesttourguide;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,11 +29,10 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
      */
     static class ViewHolder{
         private ImageView listImageView;
-        private ImageView[] stars;
+        private ImageView stars;
         private TextView nameTextView;
         private TextView typeTextView;
         private TextView openTextView;
-        private LinearLayout starsLinearLayout;
     }
 
     /**
@@ -67,18 +67,15 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
             holder = new ViewHolder();
             holder.listImageView = (ImageView) convertView.findViewById(R.id.list_pic);
             holder.nameTextView = (TextView) convertView.findViewById(R.id.list_title);
-            holder.stars = new ImageView[]{convertView.findViewById(R.id.star0),
-                    convertView.findViewById(R.id.star1), convertView.findViewById(R.id.star2),
-                    convertView.findViewById(R.id.star3), convertView.findViewById(R.id.star4)};
+            holder.stars = (ImageView) convertView.findViewById(R.id.stars);
             holder.typeTextView = (TextView) convertView.findViewById(R.id.type);
             holder.openTextView = (TextView) convertView.findViewById(R.id.open);
-            holder.starsLinearLayout = (LinearLayout) convertView.findViewById(R.id.stars_layout);
             convertView.setTag(holder);
         }
         else
             holder = (ViewHolder) convertView.getTag();
 
-                // get the {@link Attraction} object located at this position in the list
+        // get the {@link Attraction} object located at this position in the list
         Attraction currentAttraction = getItem(position);
 
         /* if a small pic is available, show it in the list, otherwise set the visibility of the
@@ -109,19 +106,31 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
 
         /* if {@link Attraction} is classified by number of stars, show the LinearLayout
         containing star images, otherwise set the visibility of the entire LinearLayout to GONE */
-        if (currentAttraction.hasStars()){
-            holder.starsLinearLayout.setVisibility(View.VISIBLE);
-
-            // show a relevant number of stars
-            for (int i = 0; i<currentAttraction.getStarsNumber(); i++)
-                holder.stars[i].setVisibility(View.VISIBLE);
-
-            // eliminate the extra number of stars
-            if(currentAttraction.getStarsNumber() < holder.stars.length)
-                for (int i = currentAttraction.getStarsNumber(); i < holder.stars.length; i++)
-                    holder.stars[i].setVisibility(View.GONE);
+        if (currentAttraction.hasStars()) {
+            Log.v("raul_adapter", "has stars " + mContext.getResources().getString(currentAttraction.getNameId()));
+            holder.stars.setVisibility(View.VISIBLE);
+            switch (currentAttraction.getStarsNumber()) {
+                case 1:
+                    holder.stars.setImageResource(R.drawable.star1_vector);
+                    break;
+                case 2:
+                    holder.stars.setImageResource(R.drawable.star2_vector);
+                    break;
+                case 3:
+                    holder.stars.setImageResource(R.drawable.star3_vector);
+                    break;
+                case 4:
+                    holder.stars.setImageResource(R.drawable.star4_vector);
+                    break;
+                case 5:
+                    holder.stars.setImageResource(R.drawable.star5_vector);
+                    break;
+            }
         }
+        else
+            holder.stars.setVisibility(View.GONE);
 
         return convertView;
     }
 }
+

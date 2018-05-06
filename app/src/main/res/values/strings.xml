@@ -56,4 +56,25 @@
 
     <string name="type_list">Type: %1$s</string>
     <string name="open_list">Open: %1$s</string>
+
+    <string name="hotel_opening">24 hours</string>
+
+    <string name="marriot_name">JW Marriott Bucharest Grand</string>
+    <string name="marriot_address">90 Calea 13 Septembrie, Bucharest 050726</string>
+    <string name="marriot_phone">021 403 0000</string>
+    <string name="marriot_web">marriott.com</string>
+    <string name="marriot_geo">geo:44.425527, 26.077076</string>
+
+    <string name="michelangelo_name">Hotel Michelangelo</string>
+    <string name="michelangelo_address">25 Henri Coanda Streed, Bucharest 010667</string>
+    <string name="michelangelo_phone">021 650 0027</string>
+    <string name="michelangelo_web">hotelmichelangelo.ro</string>
+    <string name="michelangelo_geo">geo:44.448637, 26.091872</string>
+
+    <string name="ramada_name">Ramada Parc Hotel</string>
+    <string name="ramada_address">3-5 B Poligrafiei Avenue, Bucharest 013704</string>
+    <string name="ramada_phone">021 549 2000</string>
+    <string name="ramada_web">wyndhamhotels.com</string>
+    <string name="ramada_geo">geo:44.479988, 26.063516</string>
+
 </resources>

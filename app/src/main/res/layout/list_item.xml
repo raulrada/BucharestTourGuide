@@ -4,26 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-    
+
     <ImageView
         android:id="@+id/list_pic"
         android:layout_width="@dimen/pic_width_list"
         android:layout_height="@dimen/pic_height_list"
-        android:layout_marginStart="@dimen/pic_list_margin_start"
-        android:layout_marginEnd="@dimen/pic_list_margin_end"
-        android:layout_marginTop="@dimen/pic_list_margin_top"
-        android:layout_marginBottom="@dimen/pic_list_margin_bottom"
         android:layout_gravity="center_vertical"
-        tools:src="@drawable/carol_small"
-        tools:ignore="ContentDescription"/>
-    
+        android:layout_marginBottom="@dimen/pic_list_margin_bottom"
+        android:layout_marginEnd="@dimen/pic_list_margin_end"
+        android:layout_marginStart="@dimen/pic_list_margin_start"
+        android:layout_marginTop="@dimen/pic_list_margin_top"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/carol_small" />
+
     <LinearLayout
         android:layout_width="@dimen/no_width"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"
         android:layout_gravity="center_vertical"
-        android:gravity="center">
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/list_title"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            tools:text="Carol Park"/>
+            tools:text="Carol Park" />
 
         <TextView
             android:id="@+id/type"
@@ -39,77 +39,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            tools:text="Type:"/>
+            tools:text="Type:" />
 
-        <LinearLayout
-            android:id="@+id/stars_layout"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/stars"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginStart="@dimen/linear_layout_list_regular_margin_start"
-            android:layout_marginEnd="@dimen/linear_layout_list_regular_margin_end"
-            android:layout_marginTop="@dimen/linear_layout_list_regular_margin_top"
-            android:layout_marginBottom="@dimen/linear_layout_list_regular_margin_bottom">
-
-            <ImageView
-                android:id="@+id/star0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:src="@drawable/star_vector"
-                tools:ignore="ContentDescription"/>
-
-            <ImageView
-                android:id="@+id/star1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:src="@drawable/star_vector"
-                tools:ignore="ContentDescription"/>
-
-            <ImageView
-                android:id="@+id/star2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:src="@drawable/star_vector"
-                tools:ignore="ContentDescription"/>
-
-            <ImageView
-                android:id="@+id/star3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:src="@drawable/star_vector"
-                tools:ignore="ContentDescription"/>
-
-            <ImageView
-                android:id="@+id/star4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:src="@drawable/star_vector"
-                tools:ignore="ContentDescription"/>
-
-        </LinearLayout>
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/star4_vector" />
 
         <TextView
-            style="@style/TextStyle.listItem.regular"
             android:id="@+id/open"
+            style="@style/TextStyle.listItem.regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_list_title_margin_start"
             android:gravity="center"
             android:textSize="@dimen/text_list_regular_size"
-            android:layout_marginStart="@dimen/text_list_title_margin_start"
-            tools:text="Open: "/>
+            tools:text="Open: " />
 
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/next_vector"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="@dimen/pic_list_margin_start"
-        android:layout_marginEnd="@dimen/pic_list_margin_end"
-        android:layout_marginTop="@dimen/pic_list_margin_top"
         android:layout_marginBottom="@dimen/pic_list_margin_bottom"
-        tools:ignore="ContentDescription"/>
+        android:layout_marginEnd="@dimen/pic_list_margin_end"
+        android:layout_marginStart="@dimen/pic_list_margin_start"
+        android:layout_marginTop="@dimen/pic_list_margin_top"
+        android:src="@drawable/next_vector"
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>
