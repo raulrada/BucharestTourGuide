@@ -16,7 +16,7 @@
     <string name="botanic_since">1891</string>
     <string name="botanic_size">17.5 ha</string>
     <string name="botanic_geo">geo:44.436721, 26.065723</string>
-    <string name="botanic_opening">7:30 - 15:30, \nMonday - Friday</string>
+    <string name="botanic_opening">7:30 &#8211; 15:30, \nMonday - Friday</string>
 
     <string name="carol_name">Carol Park</string>
     <string name="carol_since">1906</string>
@@ -106,5 +106,45 @@
     <string name="carpati_phone">021 315 0140</string>
     <string name="carpati_web">imparatulromanilor.ro</string>
     <string name="carpati_geo">geo:44.436369, 26.095076</string>
+
+    <string name="antipa_name">Antipa Museum</string>
+    <string name="antipa_type">Natural history museum</string>
+    <string name="antipa_opening">10:00 &#8211; 18:00,\nTuesday - Sunday</string>
+    <string name="antipa_address">1 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
+    <string name="antipa_phone">021 312 8826</string>
+    <string name="antipa_web">antipa.ro</string>
+    <string name="antipa_geo">geo:44.453131, 26.084969</string>
+
+    <string name="history_name">National Museum of Romanian History</string>
+    <string name="history_type">History museum</string>
+    <string name="history_opening">09:00 &#8211; 17:00,\nWednesday - Sunday</string>
+    <string name="history_address">12 Calea Victoriei, Bucharest 030026</string>
+    <string name="history_phone">021 315 8207</string>
+    <string name="history_web">mnir.ro</string>
+    <string name="history_geo">geo:44.431511, 26.097228</string>
+
+    <string name="art_name">The National Museum of Art of Romania</string>
+    <string name="art_type">Art museum</string>
+    <string name="art_opening">10:00 &#8211; 18:00,\nWednesday - Sunday</string>
+    <string name="art_address">49&#8211;53 Calea Victoriei, Bucharest 010063</string>
+    <string name="art_phone">021 313 3030</string>
+    <string name="art_web">mnar.arts.ro</string>
+    <string name="art_geo">geo:44.439495, 26.095953</string>
+
+    <string name="sat_name">\"Dimitrie Gusti\" National Village Museum</string>
+    <string name="sat_type">Ethnographic museum</string>
+    <string name="sat_opening">09:00 &#8211; 19:00,\nMonday - Sunday</string>
+    <string name="sat_address">28&#8211;30, Pavel Dimitrievici Kiseleff Road, Bucharest 011347</string>
+    <string name="sat_phone">021 317 9103</string>
+    <string name="sat_web">muzeul-satului.ro</string>
+    <string name="sat_geo">geo:44.472336, 26.076505</string>
+
+    <string name="taran_name">\Museum of the Romanian Peasant</string>
+    <string name="taran_type">Heritage museum</string>
+    <string name="taran_opening">09:00 &#8211; 17:00,\nTuesday - Sunday</string>
+    <string name="taran_address">3 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
+    <string name="taran_phone">021 317 9661</string>
+    <string name="taran_web">muzeultaranuluiroman.ro</string>
+    <string name="taran_geo">geo:44.472336, 26.076505</string>
 
 </resources>

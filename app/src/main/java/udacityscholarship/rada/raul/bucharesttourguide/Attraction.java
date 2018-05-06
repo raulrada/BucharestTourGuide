@@ -179,7 +179,7 @@ abstract class Attraction {
      * setter method for typeId
      * @param typeId identifies the String resource containing the type of the {@link Attraction}
      */
-    public void setType (int typeId){
+    public void setTypeId(int typeId){
         mTypeId = typeId;
     }
 
