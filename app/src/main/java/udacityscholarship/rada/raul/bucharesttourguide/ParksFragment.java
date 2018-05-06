@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -24,8 +25,19 @@ public class ParksFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
-        final ArrayList<Park> parks = generateParks();
+        // create a list of {@link Park} objects
+        final ArrayList<Attraction> parks = generateParks();
 
+        // create a {@link LocationAdapter} whose data source is a list of {@link Park} objects. The
+        // adapter knows how to create list items for each item in the list.
+        LocationAdapter adapter = new LocationAdapter(getActivity(), parks);
+
+        // find the ListView in attractions_list.xml
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
+
+        // make listView use the {@link LocationAdapter} created above in order to display each
+        // {@ link Park} object in the list.
+        listView.setAdapter(adapter);
 
         return rootView;
     }
@@ -34,8 +46,8 @@ public class ParksFragment extends Fragment {
      * Generates list of Parks
      * @return ArrayList<Park> containing Park objects
      */
-    public ArrayList<Park> generateParks(){
-        ArrayList<Park> parks = new ArrayList<Park>();
+    public ArrayList<Attraction> generateParks(){
+        ArrayList<Attraction> parks = new ArrayList<Attraction>();
         parks.add(new Park(R.string.ior_name, R.string.ior_opening, R.drawable.ior_big,
                 R.string.ior_geo, R.drawable.ior_small, R.string.ior_size, R.string.ior_since));
         parks.add(new Park(R.string.botanic_name, R.string.botanic_opening, R.drawable.botanica_big,
@@ -53,6 +65,5 @@ public class ParksFragment extends Fragment {
         parks.add(new Park(R.string.vacaresti_name, R.string.vacaresti_opening, R.drawable.vacaresti_big,
                 R.string.vacaresti_geo, R.drawable.vacaresti_small,R.string.vacaresti_size,R.string.vacaresti_since));
         return parks;
-
     }
 }

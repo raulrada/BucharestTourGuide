@@ -42,6 +42,7 @@
             tools:text="Type:"/>
 
         <LinearLayout
+            android:id="@+id/stars_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -90,6 +91,7 @@
 
         <TextView
             style="@style/TextStyle.listItem.regular"
+            android:id="@+id/open"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

@@ -22,35 +22,38 @@
     <string name="carol_since">1906</string>
     <string name="carol_size">36 ha</string>
     <string name="carol_geo">geo:44.417961, 26.094777</string>
-    <string name="carol_opening">open 24 hours</string>
+    <string name="carol_opening">24 hours</string>
 
     <string name="cismigiu_name">Cismigiu Park</string>
     <string name="cismigiu_since">1847</string>
     <string name="cismigiu_size">16 ha</string>
     <string name="cismigiu_geo">geo:44.434783, 26.093219</string>
-    <string name="cismigiu_opening">open 24 hours</string>
+    <string name="cismigiu_opening">24 hours</string>
 
     <string name="izvor_name">Izvor Park</string>
     <string name="izvor_since">n/a</string>
     <string name="izvor_size">17 ha</string>
     <string name="izvor_geo">geo:44.432847, 26.089901</string>
-    <string name="izvor_opening">open 24 hours</string>
+    <string name="izvor_opening">24 hours</string>
 
     <string name="herastrau_name">King Michael I Park (Herastrau)</string>
     <string name="herastrau_since">1936</string>
     <string name="herastrau_size">187 hectars</string>
     <string name="herastrau_geo">geo:44.466944, 26.085654</string>
-    <string name="herastrau_opening">open 24 hours</string>
+    <string name="herastrau_opening">24 hours</string>
 
     <string name="tineretului_name">Tineretului Park</string>
     <string name="tineretului_since">1974</string>
     <string name="tineretului_size">200 ha</string>
     <string name="tineretului_geo">geo:44.413888, 26.104677</string>
-    <string name="tineretului_opening">open 24 hours</string>
+    <string name="tineretului_opening">24 hours</string>
 
     <string name="vacaresti_name">Vacaresti Park Nature Reserve</string>
     <string name="vacaresti_since">2016</string>
     <string name="vacaresti_size">190 ha</string>
     <string name="vacaresti_geo">geo:44.405086, 26.131094</string>
-    <string name="vacaresti_opening">open 24 hours</string>
+    <string name="vacaresti_opening">24 hours</string>
+
+    <string name="type_list">Type: %1$s</string>
+    <string name="open_list">Open: %1$s</string>
 </resources>
