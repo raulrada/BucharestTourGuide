@@ -4,8 +4,13 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
+
+    // String key used to get the int value of the Tab in MainActivity
+    // from the Intent in DetailsActivity
+    private final String TAB_POSITION_STRING = "tab position";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Connect the tab layout with the view pager.
         tabLayout.setupWithViewPager(viewPager);
+
+        //if user returns to MainActivity from DetailsActivity, go back to previously selected Tab
+        //position 0 is reserved for reflecting the fact that there is no position to get from
+        //an Intent. All tab positions are off-set by 1 in the sequence below
+        if (getIntent().getIntExtra(TAB_POSITION_STRING, 0) != 0){
+            int tabPosition = getIntent().getIntExtra(TAB_POSITION_STRING, 0);
+            //eliminate the tab possition off-setting by 1
+            viewPager.setCurrentItem(tabPosition-1);
+        }
+
     }
 }

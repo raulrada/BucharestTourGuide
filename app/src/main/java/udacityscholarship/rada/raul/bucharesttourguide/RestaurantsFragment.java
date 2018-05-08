@@ -1,12 +1,13 @@
 package udacityscholarship.rada.raul.bucharesttourguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,20 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class RestaurantsFragment extends Fragment {
+
+    // String key used to put an extra int value of the Tab in MainActivity
+    // in the Intent to start DetailsActivity
+    private final String TAB_POSITION_STRING = "tab position";
+
+    // String key used to put an extra int value of the clicked item position
+    // in the Restaurants fragment, in the Intent to start DetailsActivity
+    private final String ITEM_POSITION_STRING = "item position";
+
+    //position of the current tab plus 1
+    private final int TAB_POSITION = 2;
+
+    //list of Restaurants
+    static ArrayList<Attraction> restaurants;
 
     public RestaurantsFragment() {
         // Required empty public constructor
@@ -24,11 +39,11 @@ public class RestaurantsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
-        final ArrayList<Attraction> museums = generateRestaurants();
+        restaurants = generateRestaurants();
 
         // create a {@link LocationAdapter} whose data source is a list of {@link Museum} objects. The
         // adapter knows how to create list items for each item in the list.
-        LocationAdapter adapter = new LocationAdapter(getActivity(), museums);
+        LocationAdapter adapter = new LocationAdapter(getActivity(), restaurants);
 
         // find the ListView in attractions_list.xml
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -36,6 +51,16 @@ public class RestaurantsFragment extends Fragment {
         // make listView use the {@link LocationAdapter} created above in order to display each
         // {@ link Museum} object in the list.
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent startDetails = new Intent(getContext(), DetailsActivity.class);
+                startDetails.putExtra(TAB_POSITION_STRING, TAB_POSITION);
+                startDetails.putExtra(ITEM_POSITION_STRING, position);
+                startActivity(startDetails);
+            }
+        });
 
         return rootView;
     }

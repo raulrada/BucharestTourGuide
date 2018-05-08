@@ -1,11 +1,13 @@
 package udacityscholarship.rada.raul.bucharesttourguide;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
 
@@ -13,6 +15,20 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ParksFragment extends Fragment {
+
+    // String key used to put an extra int value of the Tab in MainActivity
+    // in the Intent to start DetailsActivity
+    private final String TAB_POSITION_STRING = "tab position";
+
+    // String key used to put an extra int value of the clicked item position
+    // in the Park fragment, in the Intent to start DetailsActivity
+    private final String ITEM_POSITION_STRING = "item position";
+
+    //position of the current tab plus 1
+    private final int TAB_POSITION = 4;
+
+    //list of Parks
+    static ArrayList<Attraction> parks;
 
     public ParksFragment() {
         // Required empty public constructor
@@ -24,7 +40,7 @@ public class ParksFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         // create a list of {@link Park} objects
-        final ArrayList<Attraction> parks = generateParks();
+        parks = generateParks();
 
         // create a {@link LocationAdapter} whose data source is a list of {@link Park} objects. The
         // adapter knows how to create list items for each item in the list.
@@ -36,6 +52,18 @@ public class ParksFragment extends Fragment {
         // make listView use the {@link LocationAdapter} created above in order to display each
         // {@ link Park} object in the list.
         listView.setAdapter(adapter);
+
+        //List item click listener to start DetailsActivity
+        // and present details about selected Park
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent startDetails = new Intent(getContext(), DetailsActivity.class);
+                startDetails.putExtra(TAB_POSITION_STRING, TAB_POSITION);
+                startDetails.putExtra(ITEM_POSITION_STRING, position);
+                startActivity(startDetails);
+            }
+        });
 
         return rootView;
     }
