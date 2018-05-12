@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         // Find the tab layout that shows the tabs
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         // Connect the tab layout with the view pager.
         tabLayout.setupWithViewPager(viewPager);
@@ -43,5 +43,46 @@ public class MainActivity extends AppCompatActivity {
             viewPager.setCurrentItem(tabPosition-1);
         }
 
+        //set background color of the tabs based on the background color in the displayed Fragment
+        switch (tabLayout.getSelectedTabPosition()){
+            case 0: tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
+                    break;
+            case 1: tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
+                    break;
+            case 2: tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
+                    break;
+            case 3: tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
+                    break;
+        }
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            /**
+             * change the background color of the tabs based on the background color
+             * in the displayed Fragment
+             */
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tabLayout.getSelectedTabPosition()){
+                    case 0: tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
+                        break;
+                    case 1: tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
+                        break;
+                    case 2: tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
+                        break;
+                    case 3: tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                //auto-generated empty stub
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                //auto-generated empty stub
+            }
+        });
     }
 }
