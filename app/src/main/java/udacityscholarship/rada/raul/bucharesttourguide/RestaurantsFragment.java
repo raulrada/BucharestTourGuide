@@ -24,6 +24,9 @@ public class RestaurantsFragment extends Fragment {
     // in the Restaurants fragment, in the Intent to start DetailsActivity
     private final String ITEM_POSITION_STRING = "item position";
 
+    //String key used to put extra int value (color id) in the Intent to start DetailsActivity
+    private final String BACKGROUND_COLOR = "background color";
+
     //position of the current tab plus 1
     private final int TAB_POSITION = 2;
 
@@ -37,13 +40,15 @@ public class RestaurantsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         restaurants = generateRestaurants();
 
         // create a {@link LocationAdapter} whose data source is a list of {@link Museum} objects. The
         // adapter knows how to create list items for each item in the list.
-        LocationAdapter adapter = new LocationAdapter(getActivity(), restaurants);
+        LocationAdapter adapter = new LocationAdapter(getActivity(), restaurants, R.color.restaurantsColor);
 
         // find the ListView in attractions_list.xml
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -52,12 +57,15 @@ public class RestaurantsFragment extends Fragment {
         // {@ link Museum} object in the list.
         listView.setAdapter(adapter);
 
+        //List item click listener to start DetailsActivity
+        // and present details about selected Restaurant
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent startDetails = new Intent(getContext(), DetailsActivity.class);
                 startDetails.putExtra(TAB_POSITION_STRING, TAB_POSITION);
                 startDetails.putExtra(ITEM_POSITION_STRING, position);
+                startDetails.putExtra(BACKGROUND_COLOR, R.color.restaurantsColor);
                 startActivity(startDetails);
             }
         });

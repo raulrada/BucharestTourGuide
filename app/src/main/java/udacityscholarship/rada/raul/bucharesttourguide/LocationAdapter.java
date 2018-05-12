@@ -1,15 +1,11 @@
 package udacityscholarship.rada.raul.bucharesttourguide;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,6 +17,7 @@ import java.util.ArrayList;
 public class LocationAdapter extends ArrayAdapter<Attraction> {
 
     private Context mContext;
+    private int mColorId;
 
     /**
      * Class of {@link ViewHolder} objects used to store each of the component views of list_item.xml
@@ -40,9 +37,10 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param attractions is the list of {@link Attraction} objects to be displayed in the list.
      */
-    public LocationAdapter(Context context, ArrayList<Attraction> attractions){
+    public LocationAdapter(Context context, ArrayList<Attraction> attractions, int colorId){
         super(context,0,attractions);
         mContext = context;
+        mColorId = colorId;
     }
 
     /**
@@ -67,7 +65,7 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
             holder = new ViewHolder();
             holder.listImageView = (ImageView) convertView.findViewById(R.id.list_pic);
             holder.nameTextView = (TextView) convertView.findViewById(R.id.list_title);
-            holder.stars = (ImageView) convertView.findViewById(R.id.stars);
+            holder.stars = (ImageView) convertView.findViewById(R.id.stars_image_list_item);
             holder.typeTextView = (TextView) convertView.findViewById(R.id.type);
             holder.openTextView = (TextView) convertView.findViewById(R.id.open);
             convertView.setTag(holder);
@@ -107,7 +105,6 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
         /* if {@link Attraction} is classified by number of stars, show the LinearLayout
         containing star images, otherwise set the visibility of the entire LinearLayout to GONE */
         if (currentAttraction.hasStars()) {
-            Log.v("raul_adapter", "has stars " + mContext.getResources().getString(currentAttraction.getNameId()));
             holder.stars.setVisibility(View.VISIBLE);
             switch (currentAttraction.getStarsNumber()) {
                 case 1:
@@ -129,6 +126,10 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
         }
         else
             holder.stars.setVisibility(View.GONE);
+
+        //set background color depending on Attraction type
+        View container = convertView.findViewById(R.id.container);
+        container.setBackgroundColor(mContext.getResources().getColor(mColorId));
 
         return convertView;
     }

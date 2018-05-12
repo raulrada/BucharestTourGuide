@@ -12,49 +12,49 @@
     <string name="ior_name">Alexandru Ioan Cuza Park</string>
     <string name="ior_since">1970</string>
     <string name="ior_size">85 ha</string>
-    <string name="ior_geo">geo:44.425370, 26.162567</string>
+    <string name="ior_geo">geo:44.425370, 26.162567 ?q=44.425370, 26.162567</string>
     <string name="ior_opening">24 hours</string>
 
     <string name="botanic_name">Botanic Garden</string>
     <string name="botanic_since">1891</string>
     <string name="botanic_size">17.5 ha</string>
-    <string name="botanic_geo">geo:44.436721, 26.065723</string>
+    <string name="botanic_geo">geo:44.436721, 26.065723 ?q=44.436721, 26.065723</string>
     <string name="botanic_opening">7:30 &#8211; 15:30, \nMonday - Friday</string>
 
     <string name="carol_name">Carol Park</string>
     <string name="carol_since">1906</string>
     <string name="carol_size">36 ha</string>
-    <string name="carol_geo">geo:44.417961, 26.094777</string>
+    <string name="carol_geo">geo:44.417961, 26.094777 ?q=44.417961, 26.094777</string>
     <string name="carol_opening">24 hours</string>
 
     <string name="cismigiu_name">Cismigiu Park</string>
     <string name="cismigiu_since">1847</string>
     <string name="cismigiu_size">16 ha</string>
-    <string name="cismigiu_geo">geo:44.434783, 26.093219</string>
+    <string name="cismigiu_geo">geo:44.434783, 26.093219 ?q=44.434783, 26.093219</string>
     <string name="cismigiu_opening">24 hours</string>
 
     <string name="izvor_name">Izvor Park</string>
     <string name="izvor_since">n/a</string>
     <string name="izvor_size">17 ha</string>
-    <string name="izvor_geo">geo:44.432847, 26.089901</string>
+    <string name="izvor_geo">geo:44.432847, 26.089901 ?q=44.432847, 26.089901</string>
     <string name="izvor_opening">24 hours</string>
 
     <string name="herastrau_name">King Michael I Park (Herastrau)</string>
     <string name="herastrau_since">1936</string>
     <string name="herastrau_size">187 hectars</string>
-    <string name="herastrau_geo">geo:44.466944, 26.085654</string>
+    <string name="herastrau_geo">geo:44.466944, 26.085654 ?q=44.466944, 26.085654</string>
     <string name="herastrau_opening">24 hours</string>
 
     <string name="tineretului_name">Tineretului Park</string>
     <string name="tineretului_since">1974</string>
     <string name="tineretului_size">200 ha</string>
-    <string name="tineretului_geo">geo:44.413888, 26.104677</string>
+    <string name="tineretului_geo">geo:44.413888, 26.104677 ?q=44.413888, 26.104677</string>
     <string name="tineretului_opening">24 hours</string>
 
     <string name="vacaresti_name">Vacaresti Park Nature Reserve</string>
     <string name="vacaresti_since">2016</string>
     <string name="vacaresti_size">190 ha</string>
-    <string name="vacaresti_geo">geo:44.405086, 26.131094</string>
+    <string name="vacaresti_geo">geo:44.405086, 26.131094 ?q=44.405086, 26.131094</string>
     <string name="vacaresti_opening">24 hours</string>
 
     <string name="hotel_opening">24 hours</string>
@@ -63,49 +63,49 @@
     <string name="marriot_address">90 Calea 13 Septembrie, Bucharest 050726</string>
     <string name="marriot_phone">021 403 0000</string>
     <string name="marriot_web">marriott.com</string>
-    <string name="marriot_geo">geo:44.425527, 26.077076</string>
+    <string name="marriot_geo">geo:44.425527, 26.077076 ?q=44.425527, 26.077076</string>
 
     <string name="michelangelo_name">Hotel Michelangelo</string>
     <string name="michelangelo_address">25 Henri Coanda Streed, Bucharest 010667</string>
     <string name="michelangelo_phone">021 650 0027</string>
     <string name="michelangelo_web">hotelmichelangelo.ro</string>
-    <string name="michelangelo_geo">geo:44.448637, 26.091872</string>
+    <string name="michelangelo_geo">geo:44.448637, 26.091872 ?q=44.448637, 26.091872</string>
 
     <string name="ramada_name">Ramada Parc Hotel</string>
     <string name="ramada_address">3&#8211;5 B Poligrafiei Avenue, Bucharest 013704</string>
     <string name="ramada_phone">021 549 2000</string>
     <string name="ramada_web">wyndhamhotels.com</string>
-    <string name="ramada_geo">geo:44.479988, 26.063516</string>
+    <string name="ramada_geo">geo:44.479988, 26.063516 ?q=44.479988, 26.063516</string>
 
     <string name="athenee_name">Athenee Palace Hilton Bucharest</string>
     <string name="athenee_address">1&#8211;3 Episcopiei Street, Bucharest 010292</string>
     <string name="athenee_phone">021 303 3777</string>
     <string name="athenee_web">hilton.com</string>
-    <string name="athenee_geo">geo:44.440931, 26.095772</string>
+    <string name="athenee_geo">geo:44.440931, 26.095772 ?q=44.440931, 26.095772</string>
 
     <string name="crowne_name">Crowne Plaza Bucharest</string>
     <string name="crowne_address">1 Poligrafiei Boulevard, Bucharest 013704</string>
     <string name="crowne_phone">021 224 0034</string>
     <string name="crowne_web">ihg.com</string>
-    <string name="crowne_geo">geo:44.479590, 26.064300</string>
+    <string name="crowne_geo">geo:44.479590, 26.064300 ?q=44.479590, 26.064300</string>
 
     <string name="radisson_name">Radisson Blu Hotel</string>
     <string name="radisson_address">63&#8211;81 Calea Victoriei, Bucharest 030165</string>
     <string name="radisson_phone">021 311 9000</string>
     <string name="radisson_web">radissonblu.com</string>
-    <string name="radisson_geo">geo:44.479590, 26.064300</string>
+    <string name="radisson_geo">geo:44.479590, 26.064300 ?q=44.479590, 26.064300</string>
 
     <string name="antique_name">Antique Hostel Bucharest</string>
     <string name="antique_address">Splaiul Independentei, Bucharest 030167</string>
     <string name="antique_phone">031 425 8519</string>
     <string name="antique_web">n/a</string>
-    <string name="antique_geo">geo:44.429642, 26.099758</string>
+    <string name="antique_geo">geo:44.429642, 26.099758 ?q=44.429642, 26.099758</string>
 
     <string name="carpati_name">Hotel Carpati Imparatul Romanilor</string>
     <string name="carpati_address">16 Matei Millo Street, Bucharest 010145</string>
     <string name="carpati_phone">021 315 0140</string>
     <string name="carpati_web">imparatulromanilor.ro</string>
-    <string name="carpati_geo">geo:44.436369, 26.095076</string>
+    <string name="carpati_geo">geo:44.436369, 26.095076 ?q=44.436369, 26.095076</string>
 
     <string name="antipa_name">Antipa Museum</string>
     <string name="antipa_type">Natural history museum</string>
@@ -113,7 +113,7 @@
     <string name="antipa_address">1 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
     <string name="antipa_phone">021 312 8826</string>
     <string name="antipa_web">antipa.ro</string>
-    <string name="antipa_geo">geo:44.453131, 26.084969</string>
+    <string name="antipa_geo">geo:44.453131, 26.084969 ?q=44.453131, 26.084969</string>
 
     <string name="history_name">National Museum of Romanian History</string>
     <string name="history_type">History museum</string>
@@ -121,7 +121,7 @@
     <string name="history_address">12 Calea Victoriei, Bucharest 030026</string>
     <string name="history_phone">021 315 8207</string>
     <string name="history_web">mnir.ro</string>
-    <string name="history_geo">geo:44.431511, 26.097228</string>
+    <string name="history_geo">geo:44.431511, 26.097228 ?q=44.431511, 26.097228</string>
 
     <string name="art_name">The National Museum of Art of Romania</string>
     <string name="art_type">Art museum</string>
@@ -129,7 +129,7 @@
     <string name="art_address">49&#8211;53 Calea Victoriei, Bucharest 010063</string>
     <string name="art_phone">021 313 3030</string>
     <string name="art_web">mnar.arts.ro</string>
-    <string name="art_geo">geo:44.439495, 26.095953</string>
+    <string name="art_geo">geo:44.439495, 26.095953 ?q=44.439495, 26.095953</string>
 
     <string name="sat_name">\"Dimitrie Gusti\" National Village Museum</string>
     <string name="sat_type">Ethnographic museum</string>
@@ -137,7 +137,7 @@
     <string name="sat_address">28&#8211;30, Pavel Dimitrievici Kiseleff Road, Bucharest 011347</string>
     <string name="sat_phone">021 317 9103</string>
     <string name="sat_web">muzeul-satului.ro</string>
-    <string name="sat_geo">geo:44.472336, 26.076505</string>
+    <string name="sat_geo">geo:44.472336, 26.076505 ?q=44.472336, 26.076505</string>
 
     <string name="taran_name">Museum of the Romanian Peasant</string>
     <string name="taran_type">Heritage museum</string>
@@ -145,7 +145,7 @@
     <string name="taran_address">3 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
     <string name="taran_phone">021 317 9661</string>
     <string name="taran_web">muzeultaranuluiroman.ro</string>
-    <string name="taran_geo">geo:44.472336, 26.076505</string>
+    <string name="taran_geo">geo:44.472336, 26.076505 ?q=44.472336, 26.076505</string>
 
     <string name="caru_name">Caru\' cu Bere</string>
     <string name="caru_type">Romanian food</string>
@@ -154,7 +154,7 @@
     <string name="caru_address">3 Pavel Dimitrievici Kiseleff Road, Bucharest 011341</string>
     <string name="caru_phone">021 317 9661</string>
     <string name="caru_web">carucubere.ro</string>
-    <string name="caru_geo">geo:44.472336, 26.076505</string>
+    <string name="caru_geo">geo:44.431993, 26.098125 ?q=44.431993, 26.098125</string>
 
     <string name="curtea_name">Curtea Berarilor</string>
     <string name="curtea_type">Romanian food</string>
@@ -163,7 +163,7 @@
     <string name="curtea_address">9&#8211;11 Selari Steet, Bucharest 030167</string>
     <string name="curtea_phone">021 313 7532</string>
     <string name="curtea_web">curteaberarilor.com</string>
-    <string name="curtea_geo">geo:44.430597, 26.100779</string>
+    <string name="curtea_geo">geo:44.430597, 26.100779 ?q=44.430597, 26.100779</string>
 
     <string name="pescarus_name">Restaurant Pescarus</string>
     <string name="pescarus_type">International</string>
@@ -171,7 +171,7 @@
     <string name="pescarus_address">Aleea Pescarus, Bucharest</string>
     <string name="pescarus_phone">0731 330 034</string>
     <string name="pescarus_web">restaurantpescarus.ro</string>
-    <string name="pescarus_geo">geo:44.472606, 26.085734</string>
+    <string name="pescarus_geo">geo:44.472606, 26.085734 ?q=44.472606, 26.085734</string>
 
     <string name="buon_name">Trattoria Buongiorno Arena</string>
     <string name="buon_type">Italian food</string>
@@ -179,7 +179,7 @@
     <string name="buon_address">37&#8211;39 Basarabia Boulevard, Bucharest 022103</string>
     <string name="buon_phone">0731 037 387</string>
     <string name="buon_web">trattoriabuongiorno.ro</string>
-    <string name="buon_geo">geo:44.433558, 26.153660</string>
+    <string name="buon_geo">geo:44.433558, 26.153660 ?q=44.433558, 26.153660</string>
 
     <string name="zen_name">Zen Garden</string>
     <string name="zen_type">Chinese food</string>
@@ -187,6 +187,7 @@
     <string name="zen_address">3 Silvestru Street, Bucharest 030167</string>
     <string name="zen_phone">0787 823 134</string>
     <string name="zen_web">zen-garden-restaurant.ro</string>
-    <string name="zen_geo">geo:44.440305, 26.112175</string>
+    <string name="zen_geo">geo:44.440305, 26.112175 ?q=44.440305, 26.112175</string>
 
+    <string name="back">Back</string>
 </resources>

@@ -24,6 +24,9 @@ public class ParksFragment extends Fragment {
     // in the Park fragment, in the Intent to start DetailsActivity
     private final String ITEM_POSITION_STRING = "item position";
 
+    //String key used to put extra int value (color id) in the Intent to start DetailsActivity
+    private final String BACKGROUND_COLOR = "background color";
+
     //position of the current tab plus 1
     private final int TAB_POSITION = 4;
 
@@ -37,6 +40,8 @@ public class ParksFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         // create a list of {@link Park} objects
@@ -44,7 +49,7 @@ public class ParksFragment extends Fragment {
 
         // create a {@link LocationAdapter} whose data source is a list of {@link Park} objects. The
         // adapter knows how to create list items for each item in the list.
-        LocationAdapter adapter = new LocationAdapter(getActivity(), parks);
+        LocationAdapter adapter = new LocationAdapter(getActivity(), parks, R.color.parksColor);
 
         // find the ListView in attractions_list.xml
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -61,6 +66,7 @@ public class ParksFragment extends Fragment {
                 Intent startDetails = new Intent(getContext(), DetailsActivity.class);
                 startDetails.putExtra(TAB_POSITION_STRING, TAB_POSITION);
                 startDetails.putExtra(ITEM_POSITION_STRING, position);
+                startDetails.putExtra(BACKGROUND_COLOR, R.color.parksColor);
                 startActivity(startDetails);
             }
         });

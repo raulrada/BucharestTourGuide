@@ -29,6 +29,12 @@
     <dimen name="linear_layout_list_regular_margin_top">0dp</dimen>
     <dimen name="linear_layout_list_regular_margin_bottom">0dp</dimen>
 
-    <!--dimensions of text-->
+    <!-- Dimensions of directions vector asset-->
+    <dimen name="directions_width">58dp</dimen>
+    <dimen name="directions_height">58dp</dimen>
+
+    <!-- Dimensions for activity_details.xml -->
+    <dimen name="large_image_margin_top_non_standard">5dp</dimen>
+    <dimen name="large_image_margin_top_standard">0dp</dimen>
 
 </resources>

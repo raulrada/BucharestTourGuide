@@ -26,6 +26,9 @@ public class MuseumsFragment extends Fragment {
     // in the Museum fragment, in the Intent to start DetailsActivity
     private final String ITEM_POSITION_STRING = "item position";
 
+    //String key used to put extra int value (color id) in the Intent to start DetailsActivity
+    private final String BACKGROUND_COLOR = "background color";
+
     //position of the current tab plus 1
     private final int TAB_POSITION = 3;
 
@@ -39,6 +42,8 @@ public class MuseumsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         // create a list of {@link Museum} objects
@@ -46,7 +51,7 @@ public class MuseumsFragment extends Fragment {
 
         // create a {@link LocationAdapter} whose data source is a list of {@link Museum} objects. The
         // adapter knows how to create list items for each item in the list.
-        LocationAdapter adapter = new LocationAdapter(getActivity(), museums);
+        LocationAdapter adapter = new LocationAdapter(getActivity(), museums, R.color.museumsColor);
 
         // find the ListView in attractions_list.xml
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -63,6 +68,7 @@ public class MuseumsFragment extends Fragment {
                 Intent startDetails = new Intent(getContext(), DetailsActivity.class);
                 startDetails.putExtra(TAB_POSITION_STRING, TAB_POSITION);
                 startDetails.putExtra(ITEM_POSITION_STRING, position);
+                startDetails.putExtra(BACKGROUND_COLOR, R.color.museumsColor);
                 startActivity(startDetails);
             }
         });
