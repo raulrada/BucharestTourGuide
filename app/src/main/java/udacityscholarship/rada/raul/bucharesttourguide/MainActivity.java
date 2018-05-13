@@ -44,33 +44,42 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //set background color of the tabs based on the background color in the displayed Fragment
+        //and set the corresponding title in the ActionBar
         switch (tabLayout.getSelectedTabPosition()){
             case 0: tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
+                    getSupportActionBar().setTitle(getString(R.string.hotels));
                     break;
             case 1: tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
+                    getSupportActionBar().setTitle(getString(R.string.restaurants));
                     break;
             case 2: tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
+                    getSupportActionBar().setTitle(getString(R.string.museums));
                     break;
             case 3: tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
+                    getSupportActionBar().setTitle(getString(R.string.parks));
                     break;
         }
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             /**
              * change the background color of the tabs based on the background color
-             * in the displayed Fragment
+             * in the displayed Fragment and the title in the ActionBar
              */
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tabLayout.getSelectedTabPosition()){
                     case 0: tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
-                        break;
+                            getSupportActionBar().setTitle(getString(R.string.hotels));
+                            break;
                     case 1: tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
-                        break;
+                            getSupportActionBar().setTitle(getString(R.string.restaurants));
+                            break;
                     case 2: tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
-                        break;
+                            getSupportActionBar().setTitle(getString(R.string.museums));
+                            break;
                     case 3: tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
-                        break;
+                            getSupportActionBar().setTitle(getString(R.string.parks));
+                            break;
                 }
             }
 

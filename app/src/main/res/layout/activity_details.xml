@@ -64,16 +64,70 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/no_height"
         android:layout_weight="2"
-        tools:visibility="visible">
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/opening_hours_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="hotels"/>
+                android:layout_height="@dimen/no_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/hours_vector"
+                tools:text="Opening hours: "/>
+
+            <TextView
+                android:id="@+id/address_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/no_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/location_vector"
+                tools:text="Address: "/>
+
+            <TextView
+                android:id="@+id/web_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/no_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/web_vector"
+                android:autoLink="all"
+                android:linksClickable="true"
+                tools:text="Web address: "/>
+
+            <TextView
+                android:id="@+id/phone_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/no_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/phone_vector"
+                android:autoLink="all"
+                android:linksClickable="true"
+                tools:text="Phone number: "/>
+
+            <TextView
+                android:id="@+id/area_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/no_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/area_vector"
+                tools:text="Area: "/>
+
+            <TextView
+                android:id="@+id/since_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/no_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/since_vector"
+                tools:text="Since: "/>
 
         </LinearLayout>
 
@@ -89,6 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/back"
+            android:background="@color/buttonColor"
             android:textAllCaps="false"/>
 
     </FrameLayout>

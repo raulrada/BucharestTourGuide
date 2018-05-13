@@ -17,13 +17,6 @@ public class DetailsActivity extends AppCompatActivity {
     // from the Intent to start DetailsActivity
     private final String TAB_POSITION_STRING = "tab position";
 
-    // String key used to get the int value of the clicked item position
-    // in the fragment launching DetailsActivity, from the related Intent
-    private final String ITEM_POSITION_STRING = "item position";
-
-    //String key used to get value of color id from the Intent used to start DetailsActivity
-    private final String BACKGROUND_COLOR = "background color";
-
     //position of the current tab in MainActivity
     private int tabPosition;
 
@@ -42,9 +35,12 @@ public class DetailsActivity extends AppCompatActivity {
     private ImageView starsImage;
     private TextView attractionNameTextView;
     private TextView attractionTypeTextView;
-
-    //ScrollView in activity_details.xml showing details about the selected Attraction
-    private ScrollView attractionScroll;
+    private TextView openingHoursTextView;
+    private TextView addressTextView;
+    private TextView webTextView;
+    private TextView phoneTextView;
+    private TextView sinceTextView;
+    private TextView areaTextView;
 
     //the Attraction about which information should be displayed
     private Attraction currentAttraction;
@@ -90,13 +86,29 @@ public class DetailsActivity extends AppCompatActivity {
      * information about the selected Attraction).
      */
     private void setup(){
+
+        //hide action bar in DetailsActivity, as it is not necessary
+        getSupportActionBar().hide();
+
+        // String key used to get the int value of the clicked item position
+        // in the fragment launching DetailsActivity, from the related Intent
+        final String ITEM_POSITION_STRING = "item position";
+
+        //String key used to get value of color id from the Intent used to start DetailsActivity
+        final String BACKGROUND_COLOR = "background color";
+
         button = (Button) findViewById(R.id.back_button);
         attractionImage = (ImageView) findViewById(R.id.attraction_image);
         directionsImage = (ImageView) findViewById(R.id.directions_image);
         starsImage = (ImageView) findViewById(R.id.stars_image_details);
         attractionNameTextView = (TextView) findViewById(R.id.attraction_name_text_view);
         attractionTypeTextView = (TextView) findViewById(R.id.attraction_type_text_view);
-        attractionScroll = (ScrollView) findViewById(R.id.attraction_scroll);
+        openingHoursTextView = (TextView) findViewById(R.id.opening_hours_text_view);
+        addressTextView = (TextView) findViewById(R.id.address_text_view);
+        webTextView = (TextView) findViewById(R.id.web_text_view);
+        phoneTextView = (TextView) findViewById(R.id.phone_text_view);
+        sinceTextView = (TextView) findViewById(R.id.since_text_view);
+        areaTextView = (TextView) findViewById(R.id.area_text_view);
 
         tabPosition = getIntent().getIntExtra(TAB_POSITION_STRING, 1);
         position = getIntent().getIntExtra(ITEM_POSITION_STRING,0);
@@ -164,6 +176,43 @@ public class DetailsActivity extends AppCompatActivity {
         else
             starsImage.setVisibility(View.GONE);
 
+        //display opening hours of the selected Attraction
+        openingHoursTextView.setText(getString(currentAttraction.getOpeningHoursId()));
+
+        //display the address of the selected Attraction, if the Attraction has an address;
+        // otherwise, remove from the screen the TextView which should contain the address
+        if (currentAttraction.hasAddress())
+            addressTextView.setText(getString(currentAttraction.getAddressId()));
+        else
+            addressTextView.setVisibility(View.GONE);
+
+        //display the web address of the selected Attraction, if the Attraction has a web address;
+        // otherwise, remove from the screen the TextView which should contain the web address
+        if (currentAttraction.hasWebAddress())
+            webTextView.setText(getString(currentAttraction.getWebAddressId()));
+        else
+            webTextView.setVisibility(View.GONE);
+
+        //display the phone number of the selected Attraction, if the Attraction has a phone number;
+        // otherwise, remove from the screen the TextView which should contain the phone number
+        if (currentAttraction.hasPhoneNumber())
+            phoneTextView.setText(getString(currentAttraction.getPhoneNumberId()));
+        else
+            phoneTextView.setVisibility(View.GONE);
+
+        //display the area of the selected Attraction, if info is available;
+        // otherwise, remove from the screen the TextView which should contain the area
+        if (currentAttraction.hasSize())
+            areaTextView.setText(getString(R.string.attraction_area,getString(currentAttraction.getSizeId())));
+        else
+            areaTextView.setVisibility(View.GONE);
+
+        //display the opening year of the selected Attraction, if info is available;
+        // otherwise, remove from the screen the TextView which should contain the opening year
+        if (currentAttraction.hasSince())
+            sinceTextView.setText(getString(R.string.attraction_since,getString(currentAttraction.getSinceId())));
+        else
+            sinceTextView.setVisibility(View.GONE);
     }
 
     /**

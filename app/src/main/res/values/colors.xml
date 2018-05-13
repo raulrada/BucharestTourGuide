@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#415C8C</color>
 
     <color name="starColor">#e8fa35</color>
 
@@ -10,5 +10,7 @@
     <color name="parksColor">#A5D6A7</color>
     <color name="hotelsColor">#EF9A9A</color>
     <color name="museumsColor">#B0BEC5</color>
+
+    <color name="buttonColor">#94b5f1</color>
 
 </resources>

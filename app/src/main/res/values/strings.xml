@@ -9,6 +9,9 @@
     <string name="type_list">Type: %1$s</string>
     <string name="open_list">Open: %1$s</string>
 
+    <string name="attraction_area">Area: %1$s</string>
+    <string name="attraction_since">Since: %1$s</string>
+
     <string name="ior_name">Alexandru Ioan Cuza Park</string>
     <string name="ior_since">1970</string>
     <string name="ior_size">85 ha</string>
