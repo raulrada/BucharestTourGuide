@@ -4,7 +4,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,27 +36,31 @@ public class MainActivity extends AppCompatActivity {
         //if user returns to MainActivity from DetailsActivity, go back to previously selected Tab
         //position 0 is reserved for reflecting the fact that there is no position to get from
         //an Intent. All tab positions are off-set by 1 in the sequence below
-        if (getIntent().getIntExtra(TAB_POSITION_STRING, 0) != 0){
+        if (getIntent().getIntExtra(TAB_POSITION_STRING, 0) != 0) {
             int tabPosition = getIntent().getIntExtra(TAB_POSITION_STRING, 0);
             //eliminate the tab possition off-setting by 1
-            viewPager.setCurrentItem(tabPosition-1);
+            viewPager.setCurrentItem(tabPosition - 1);
         }
 
         //set background color of the tabs based on the background color in the displayed Fragment
         //and set the corresponding title in the ActionBar
-        switch (tabLayout.getSelectedTabPosition()){
-            case 0: tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
-                    getSupportActionBar().setTitle(getString(R.string.hotels));
-                    break;
-            case 1: tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
-                    getSupportActionBar().setTitle(getString(R.string.restaurants));
-                    break;
-            case 2: tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
-                    getSupportActionBar().setTitle(getString(R.string.museums));
-                    break;
-            case 3: tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
-                    getSupportActionBar().setTitle(getString(R.string.parks));
-                    break;
+        switch (tabLayout.getSelectedTabPosition()) {
+            case 0:
+                tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
+                getSupportActionBar().setTitle(getString(R.string.hotels));
+                break;
+            case 1:
+                tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
+                getSupportActionBar().setTitle(getString(R.string.restaurants));
+                break;
+            case 2:
+                tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
+                getSupportActionBar().setTitle(getString(R.string.museums));
+                break;
+            case 3:
+                tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
+                getSupportActionBar().setTitle(getString(R.string.parks));
+                break;
         }
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -67,19 +70,23 @@ public class MainActivity extends AppCompatActivity {
              */
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                switch (tabLayout.getSelectedTabPosition()){
-                    case 0: tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
-                            getSupportActionBar().setTitle(getString(R.string.hotels));
-                            break;
-                    case 1: tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
-                            getSupportActionBar().setTitle(getString(R.string.restaurants));
-                            break;
-                    case 2: tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
-                            getSupportActionBar().setTitle(getString(R.string.museums));
-                            break;
-                    case 3: tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
-                            getSupportActionBar().setTitle(getString(R.string.parks));
-                            break;
+                switch (tabLayout.getSelectedTabPosition()) {
+                    case 0:
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
+                        getSupportActionBar().setTitle(getString(R.string.hotels));
+                        break;
+                    case 1:
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
+                        getSupportActionBar().setTitle(getString(R.string.restaurants));
+                        break;
+                    case 2:
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
+                        getSupportActionBar().setTitle(getString(R.string.museums));
+                        break;
+                    case 3:
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
+                        getSupportActionBar().setTitle(getString(R.string.parks));
+                        break;
                 }
             }
 

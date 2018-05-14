@@ -16,22 +16,18 @@ import java.util.ArrayList;
  */
 public class RestaurantsFragment extends Fragment {
 
+    //list of Restaurants
+    static ArrayList<Attraction> restaurants;
     // String key used to put an extra int value of the Tab in MainActivity
     // in the Intent to start DetailsActivity
     private final String TAB_POSITION_STRING = "tab position";
-
     // String key used to put an extra int value of the clicked item position
     // in the Restaurants fragment, in the Intent to start DetailsActivity
     private final String ITEM_POSITION_STRING = "item position";
-
     //String key used to put extra int value (color id) in the Intent to start DetailsActivity
     private final String BACKGROUND_COLOR = "background color";
-
     //position of the current tab plus 1
     private final int TAB_POSITION = 2;
-
-    //list of Restaurants
-    static ArrayList<Attraction> restaurants;
 
     public RestaurantsFragment() {
         // Required empty public constructor
@@ -75,6 +71,7 @@ public class RestaurantsFragment extends Fragment {
 
     /**
      * Generates list of Restaurants
+     *
      * @return ArrayList<Attraction> containing Restaurant objects
      */
     private ArrayList<Attraction> generateRestaurants() {

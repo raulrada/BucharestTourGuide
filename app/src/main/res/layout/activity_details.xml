@@ -12,44 +12,44 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/no_height"
         android:layout_weight="1.6"
-        tools:src="@drawable/herastrau_big"
+        android:scaleType="centerCrop"
         tools:ignore="ContentDescription"
-        android:scaleType="centerCrop"/>
+        tools:src="@drawable/herastrau_big" />
 
     <LinearLayout
         style="@style/view_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="@dimen/no_width"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="@dimen/details_view_margin_start"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                style="@style/TextStyle.details.title"
                 android:id="@+id/attraction_name_text_view"
+                style="@style/TextStyle.details.title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/antipa_name"/>
+                tools:text="@string/antipa_name" />
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/attraction_type_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/antipa_type"/>
+                android:text="@string/antipa_type" />
 
             <ImageView
                 android:id="@+id/stars_image_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:ignore="ContentDescription"
-                tools:src="@drawable/star3_vector"/>
+                tools:src="@drawable/star3_vector" />
 
         </LinearLayout>
 
@@ -57,14 +57,14 @@
             android:id="@+id/directions_image"
             android:layout_width="@dimen/directions_width"
             android:layout_height="@dimen/directions_height"
-            tools:ignore="ContentDescription"
-            android:src="@drawable/directions_vector" />
+            android:src="@drawable/directions_vector"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
     <ScrollView
-        style="@style/view_details"
         android:id="@+id/attraction_scroll"
+        style="@style/view_details"
         android:layout_width="match_parent"
         android:layout_height="@dimen/no_height"
         android:layout_weight="2"
@@ -76,68 +76,68 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/opening_hours_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
                 android:drawableStart="@drawable/hours_vector"
-                tools:text="Opening hours: "/>
+                android:gravity="center_vertical"
+                tools:text="Opening hours: " />
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/address_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
                 android:drawableStart="@drawable/location_vector"
-                tools:text="Address: "/>
+                android:gravity="center_vertical"
+                tools:text="Address: " />
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/web_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
+                android:autoLink="all"
                 android:drawableStart="@drawable/web_vector"
-                android:autoLink="all"
+                android:gravity="center_vertical"
                 android:linksClickable="true"
-                tools:text="Web address: "/>
+                tools:text="Web address: " />
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/phone_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:drawableStart="@drawable/phone_vector"
                 android:autoLink="all"
+                android:drawableStart="@drawable/phone_vector"
+                android:gravity="center_vertical"
                 android:linksClickable="true"
-                tools:text="Phone number: "/>
+                tools:text="Phone number: " />
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/area_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
                 android:drawableStart="@drawable/area_vector"
-                tools:text="Area: "/>
+                android:gravity="center_vertical"
+                tools:text="Area: " />
 
             <TextView
-                style="@style/TextStyle.details.regular"
                 android:id="@+id/since_text_view"
+                style="@style/TextStyle.details.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_vertical"
                 android:drawableStart="@drawable/since_vector"
-                tools:text="Since: "/>
+                android:gravity="center_vertical"
+                tools:text="Since: " />
 
         </LinearLayout>
 
@@ -149,13 +149,13 @@
         android:layout_height="wrap_content">
 
         <Button
-            style="@style/button"
             android:id="@+id/back_button"
+            style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/back"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
 
     </FrameLayout>
 

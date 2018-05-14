@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 
 /**
@@ -15,22 +16,18 @@ import java.util.ArrayList;
  */
 public class HotelsFragment extends Fragment {
 
+    //list of Hotels
+    static ArrayList<Attraction> hotels;
     // String key used to put an extra int value of the Tab in MainActivity
     // in the Intent to start DetailsActivity
     private final String TAB_POSITION_STRING = "tab position";
-
     // String key used to put an extra int value of the clicked item position
     // in the Hotels fragment, in the Intent to start DetailsActivity
     private final String ITEM_POSITION_STRING = "item position";
-
     //String key used to put extra int value (color id) in the Intent to start DetailsActivity
     private final String BACKGROUND_COLOR = "background color";
-
     //position of the current tab plus 1
     private final int TAB_POSITION = 1;
-
-    //list of Hotels
-    static ArrayList<Attraction> hotels;
 
     public HotelsFragment() {
         // Required empty public constructor
@@ -78,6 +75,7 @@ public class HotelsFragment extends Fragment {
 
     /**
      * Generates list of Hotels
+     *
      * @return ArrayList<Attraction> containing Hotel objects
      */
     public ArrayList<Attraction> generateHotels() {

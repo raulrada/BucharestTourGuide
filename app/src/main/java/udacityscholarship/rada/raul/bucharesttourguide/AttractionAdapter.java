@@ -12,8 +12,9 @@ public class AttractionAdapter extends FragmentPagerAdapter {
 
     /**
      * Create a new AttractionAdapter object
+     *
      * @param context of the app
-     * @param fm fragment manager that will keep each fragment's state in the adapter across swipes
+     * @param fm      fragment manager that will keep each fragment's state in the adapter across swipes
      */
     public AttractionAdapter(Context context, FragmentManager fm) {
         super(fm);
@@ -40,5 +41,4 @@ public class AttractionAdapter extends FragmentPagerAdapter {
         else if (position == 2) return mContext.getString(R.string.museums);
         else return mContext.getString(R.string.parks);
     }
-
 }

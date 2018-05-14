@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -85,7 +84,7 @@ public class DetailsActivity extends AppCompatActivity {
      * activity_details.xml, initializing selected variables and displaying on the screen relevant
      * information about the selected Attraction).
      */
-    private void setup(){
+    private void setup() {
 
         //hide action bar in DetailsActivity, as it is not necessary
         getSupportActionBar().hide();
@@ -111,7 +110,7 @@ public class DetailsActivity extends AppCompatActivity {
         areaTextView = (TextView) findViewById(R.id.area_text_view);
 
         tabPosition = getIntent().getIntExtra(TAB_POSITION_STRING, 1);
-        position = getIntent().getIntExtra(ITEM_POSITION_STRING,0);
+        position = getIntent().getIntExtra(ITEM_POSITION_STRING, 0);
         colorId = getIntent().getIntExtra(BACKGROUND_COLOR, 0);
 
         displayAttraction();
@@ -149,31 +148,34 @@ public class DetailsActivity extends AppCompatActivity {
 
         //display the type of the Attraction, if info is available. Otherwise remove corresponding
         //TextView from screen
-        if (currentAttraction.hasType()){
+        if (currentAttraction.hasType()) {
             attractionTypeTextView.setVisibility(View.VISIBLE);
             attractionTypeTextView.setText(getString(currentAttraction.getTypeId()));
-        }
-        else
+        } else
             attractionTypeTextView.setVisibility(View.GONE);
 
         //display the number of stars of the Attraction, if case. Otherwise remove corresponding
         //ImageView from screen
-        if (currentAttraction.hasStars()){
+        if (currentAttraction.hasStars()) {
             starsImage.setVisibility(View.VISIBLE);
-            switch (currentAttraction.getStarsNumber()){
-                case 1: starsImage.setImageResource(R.drawable.star1_vector);
-                        break;
-                case 2: starsImage.setImageResource(R.drawable.star2_vector);
-                        break;
-                case 3: starsImage.setImageResource(R.drawable.star3_vector);
-                        break;
-                case 4: starsImage.setImageResource(R.drawable.star4_vector);
-                        break;
-                case 5: starsImage.setImageResource(R.drawable.star5_vector);
-                        break;
+            switch (currentAttraction.getStarsNumber()) {
+                case 1:
+                    starsImage.setImageResource(R.drawable.star1_vector);
+                    break;
+                case 2:
+                    starsImage.setImageResource(R.drawable.star2_vector);
+                    break;
+                case 3:
+                    starsImage.setImageResource(R.drawable.star3_vector);
+                    break;
+                case 4:
+                    starsImage.setImageResource(R.drawable.star4_vector);
+                    break;
+                case 5:
+                    starsImage.setImageResource(R.drawable.star5_vector);
+                    break;
             }
-        }
-        else
+        } else
             starsImage.setVisibility(View.GONE);
 
         //display opening hours of the selected Attraction
@@ -203,14 +205,14 @@ public class DetailsActivity extends AppCompatActivity {
         //display the area of the selected Attraction, if info is available;
         // otherwise, remove from the screen the TextView which should contain the area
         if (currentAttraction.hasSize())
-            areaTextView.setText(getString(R.string.attraction_area,getString(currentAttraction.getSizeId())));
+            areaTextView.setText(getString(R.string.attraction_area, getString(currentAttraction.getSizeId())));
         else
             areaTextView.setVisibility(View.GONE);
 
         //display the opening year of the selected Attraction, if info is available;
         // otherwise, remove from the screen the TextView which should contain the opening year
         if (currentAttraction.hasSince())
-            sinceTextView.setText(getString(R.string.attraction_since,getString(currentAttraction.getSinceId())));
+            sinceTextView.setText(getString(R.string.attraction_since, getString(currentAttraction.getSinceId())));
         else
             sinceTextView.setVisibility(View.GONE);
     }
@@ -220,14 +222,18 @@ public class DetailsActivity extends AppCompatActivity {
      * contains the list whose item was clicked by the user (based on value of tabPosition)
      */
     private void getAttraction() {
-        switch (tabPosition){
-            case 1: currentAttraction = HotelsFragment.hotels.get(position);
+        switch (tabPosition) {
+            case 1:
+                currentAttraction = HotelsFragment.hotels.get(position);
                 break;
-            case 2: currentAttraction = RestaurantsFragment.restaurants.get(position);
+            case 2:
+                currentAttraction = RestaurantsFragment.restaurants.get(position);
                 break;
-            case 3: currentAttraction = MuseumsFragment.museums.get(position);
+            case 3:
+                currentAttraction = MuseumsFragment.museums.get(position);
                 break;
-            case 4: currentAttraction = ParksFragment.parks.get(position);
+            case 4:
+                currentAttraction = ParksFragment.parks.get(position);
                 break;
         }
     }

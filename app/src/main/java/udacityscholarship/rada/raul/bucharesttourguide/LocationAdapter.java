@@ -20,34 +20,23 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
     private int mColorId;
 
     /**
-     * Class of {@link ViewHolder} objects used to store each of the component views of list_item.xml
-     * inside the tag field of the Layout, so you can immediately access them without
-     * the need to look them up repeatedly
-     */
-    static class ViewHolder{
-        private ImageView listImageView;
-        private ImageView stars;
-        private TextView nameTextView;
-        private TextView typeTextView;
-        private TextView openTextView;
-    }
-
-    /**
      * Constructor of {@link LocationAdapter} objects
-     * @param context is the current context (i.e. Activity) that the adapter is being created in.
+     *
+     * @param context     is the current context (i.e. Activity) that the adapter is being created in.
      * @param attractions is the list of {@link Attraction} objects to be displayed in the list.
      */
-    public LocationAdapter(Context context, ArrayList<Attraction> attractions, int colorId){
-        super(context,0,attractions);
+    public LocationAdapter(Context context, ArrayList<Attraction> attractions, int colorId) {
+        super(context, 0, attractions);
         mContext = context;
         mColorId = colorId;
     }
 
     /**
      * Provides a View for a ListView
-     * @param position in the list of data that should be displayed in the list item view.
+     *
+     * @param position    in the list of data that should be displayed in the list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the ListView.
      */
     @Override
@@ -57,7 +46,7 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
         ViewHolder holder;
 
         // Check if an existing view is being reused, otherwise inflate the view
-        if (convertView == null){
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
 
             // find relevant objects in the list item layout to be populated with info about
@@ -69,8 +58,7 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
             holder.typeTextView = (TextView) convertView.findViewById(R.id.type);
             holder.openTextView = (TextView) convertView.findViewById(R.id.open);
             convertView.setTag(holder);
-        }
-        else
+        } else
             holder = (ViewHolder) convertView.getTag();
 
         // get the {@link Attraction} object located at this position in the list
@@ -81,8 +69,7 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
         if (currentAttraction.hasSmallImage()) {
             holder.listImageView.setVisibility(View.VISIBLE);
             holder.listImageView.setImageResource(currentAttraction.getSmallPicId());
-        }
-        else
+        } else
             holder.listImageView.setVisibility(View.GONE);
 
         //set the name of the attraction in the corresponding TextView
@@ -90,12 +77,11 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
 
         /* if an {@link Attraction} type is available, show it in the list, otherwise set the
         visibility of the relevant TextView to GONE, so as not to take up any space */
-        if(currentAttraction.hasType()){
+        if (currentAttraction.hasType()) {
             holder.typeTextView.setText(mContext.getString(R.string.type_list,
                     mContext.getResources().getString(currentAttraction.getTypeId())));
             holder.typeTextView.setVisibility(View.VISIBLE);
-        }
-        else
+        } else
             holder.typeTextView.setVisibility(View.GONE);
 
         //show opening hours in relevant TextView
@@ -123,8 +109,7 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
                     holder.stars.setImageResource(R.drawable.star5_vector);
                     break;
             }
-        }
-        else
+        } else
             holder.stars.setVisibility(View.GONE);
 
         //set background color depending on Attraction type
@@ -132,6 +117,19 @@ public class LocationAdapter extends ArrayAdapter<Attraction> {
         container.setBackgroundColor(mContext.getResources().getColor(mColorId));
 
         return convertView;
+    }
+
+    /**
+     * Class of {@link ViewHolder} objects used to store each of the component views of list_item.xml
+     * inside the tag field of the Layout, so you can immediately access them without
+     * the need to look them up repeatedly
+     */
+    static class ViewHolder {
+        private ImageView listImageView;
+        private ImageView stars;
+        private TextView nameTextView;
+        private TextView typeTextView;
+        private TextView openTextView;
     }
 }
 

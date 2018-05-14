@@ -14,14 +14,15 @@ public class Hotel extends Attraction {
 
     /**
      * Hotel object constructor
-     * @param nameId String resource ID for Hotel name
-     * @param geoId String resource ID for Hotel GPS coordinates
-     * @param addressId ID of Hotel address
-     * @param starsNumber number of stars of the Hotel
-     * @param webAddressId ID of Hotel web address
+     *
+     * @param nameId        String resource ID for Hotel name
+     * @param geoId         String resource ID for Hotel GPS coordinates
+     * @param addressId     ID of Hotel address
+     * @param starsNumber   number of stars of the Hotel
+     * @param webAddressId  ID of Hotel web address
      * @param phoneNumberId ID of Hotel phone number
      */
-    public Hotel(int nameId, int geoId, int addressId, int starsNumber, int webAddressId, int phoneNumberId){
+    public Hotel(int nameId, int geoId, int addressId, int starsNumber, int webAddressId, int phoneNumberId) {
         this.setOpeningHoursId(HOTEL_OPENING_HOURS);
         this.setLargePicId(LARGE_PIC);
         this.setNameId(nameId);
