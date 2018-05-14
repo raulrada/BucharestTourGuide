@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BucharestTourGuide</string>
 
+    <string name="bucharest">Bucharest &#8211; %1$s</string>
     <string name="restaurants">Restaurants</string>
     <string name="hotels">Hotels</string>
     <string name="parks">Parks</string>

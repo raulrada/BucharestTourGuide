@@ -47,19 +47,23 @@ public class MainActivity extends AppCompatActivity {
         switch (tabLayout.getSelectedTabPosition()) {
             case 0:
                 tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
-                getSupportActionBar().setTitle(getString(R.string.hotels));
+                getSupportActionBar().setTitle(getString(R.string.bucharest,
+                        getString(R.string.hotels)));
                 break;
             case 1:
                 tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
-                getSupportActionBar().setTitle(getString(R.string.restaurants));
+                getSupportActionBar().setTitle(getString(R.string.bucharest,
+                        getString(R.string.restaurants)));
                 break;
             case 2:
                 tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
-                getSupportActionBar().setTitle(getString(R.string.museums));
+                getSupportActionBar().setTitle(getString(R.string.bucharest,
+                        getString(R.string.museums)));
                 break;
             case 3:
                 tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
-                getSupportActionBar().setTitle(getString(R.string.parks));
+                getSupportActionBar().setTitle(getString(R.string.bucharest,
+                        getString(R.string.parks)));
                 break;
         }
 
@@ -73,19 +77,23 @@ public class MainActivity extends AppCompatActivity {
                 switch (tabLayout.getSelectedTabPosition()) {
                     case 0:
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.hotelsColor));
-                        getSupportActionBar().setTitle(getString(R.string.hotels));
+                        getSupportActionBar().setTitle(getString(R.string.bucharest,
+                                getString(R.string.hotels)));
                         break;
                     case 1:
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.restaurantsColor));
-                        getSupportActionBar().setTitle(getString(R.string.restaurants));
+                        getSupportActionBar().setTitle(getString(R.string.bucharest,
+                                getString(R.string.restaurants)));
                         break;
                     case 2:
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.museumsColor));
-                        getSupportActionBar().setTitle(getString(R.string.museums));
+                        getSupportActionBar().setTitle(getString(R.string.bucharest,
+                                getString(R.string.museums)));
                         break;
                     case 3:
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.parksColor));
-                        getSupportActionBar().setTitle(getString(R.string.parks));
+                        getSupportActionBar().setTitle(getString(R.string.bucharest,
+                                getString(R.string.parks)));
                         break;
                 }
             }
