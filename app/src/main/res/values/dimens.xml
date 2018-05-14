@@ -4,6 +4,8 @@
     <dimen name="no_width">0dp</dimen>
     <dimen name="no_height">0dp</dimen>
 
+    <dimen name="tab_text_size">12sp</dimen>
+
     <!-- Dimensions of list items -->
     <dimen name="pic_width_list">90dp</dimen>
     <dimen name="pic_height_list">90dp</dimen>
@@ -36,5 +38,19 @@
     <!-- Dimensions for activity_details.xml -->
     <dimen name="large_image_margin_top_non_standard">5dp</dimen>
     <dimen name="large_image_margin_top_standard">0dp</dimen>
+
+    <dimen name="details_view_margin_start">15dp</dimen>
+    <dimen name="details_view_margin_end">10dp</dimen>
+    <dimen name="details_view_margin_top">5dp</dimen>
+    <dimen name="details_view_margin_bottom">5dp</dimen>
+
+    <dimen name="details_text_margin_start">0dp</dimen>
+    <dimen name="details_text_margin_end">5dp</dimen>
+    <dimen name="details_text_margin_top">5dp</dimen>
+    <dimen name="details_text_margin_bottom">5dp</dimen>
+    <dimen name="details_text_drawable_padding">20dp</dimen>
+
+    <dimen name="text_details_regular_size">14sp</dimen>
+    <dimen name="text_details_title_size">20sp</dimen>
 
 </resources>

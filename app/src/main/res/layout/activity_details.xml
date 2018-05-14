@@ -17,6 +17,7 @@
         android:scaleType="centerCrop"/>
 
     <LinearLayout
+        style="@style/view_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -26,15 +27,18 @@
             android:layout_width="@dimen/no_width"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginStart="@dimen/details_view_margin_start"
             android:layout_weight="1">
 
             <TextView
+                style="@style/TextStyle.details.title"
                 android:id="@+id/attraction_name_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="@string/antipa_name"/>
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/attraction_type_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +53,6 @@
 
         </LinearLayout>
 
-
         <ImageView
             android:id="@+id/directions_image"
             android:layout_width="@dimen/directions_width"
@@ -60,6 +63,7 @@
     </LinearLayout>
 
     <ScrollView
+        style="@style/view_details"
         android:id="@+id/attraction_scroll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/no_height"
@@ -72,27 +76,30 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/opening_hours_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/no_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:drawableStart="@drawable/hours_vector"
                 tools:text="Opening hours: "/>
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/address_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/no_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:drawableStart="@drawable/location_vector"
                 tools:text="Address: "/>
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/web_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/no_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:drawableStart="@drawable/web_vector"
@@ -101,9 +108,10 @@
                 tools:text="Web address: "/>
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/phone_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/no_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:drawableStart="@drawable/phone_vector"
@@ -112,18 +120,20 @@
                 tools:text="Phone number: "/>
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/area_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/no_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:drawableStart="@drawable/area_vector"
                 tools:text="Area: "/>
 
             <TextView
+                style="@style/TextStyle.details.regular"
                 android:id="@+id/since_text_view"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/no_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:drawableStart="@drawable/since_vector"
@@ -134,20 +144,19 @@
     </ScrollView>
 
     <FrameLayout
+        style="@style/view_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
+            style="@style/button"
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/back"
-            android:background="@color/buttonColor"
             android:textAllCaps="false"/>
 
     </FrameLayout>
-
-
 
 </LinearLayout>

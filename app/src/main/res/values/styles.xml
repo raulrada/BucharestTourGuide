@@ -27,4 +27,39 @@
         <item name="android:textSize">@dimen/text_list_title_size</item>
     </style>
 
+    <style name="TextStyle.details">
+        <item name="android:layout_marginStart">@dimen/details_text_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/details_text_margin_end</item>
+        <item name="android:layout_marginTop">@dimen/details_text_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/details_text_margin_bottom</item>
+    </style>
+
+    <style name="TextStyle.details.title">
+        <item name="android:textSize">@dimen/text_details_title_size</item>
+    </style>
+
+    <style name="TextStyle.details.regular">
+        <item name="android:textSize">@dimen/text_details_regular_size</item>
+        <item name="android:drawablePadding">@dimen/details_text_drawable_padding</item>
+    </style>
+
+    <style name="view_details" parent="Base.Theme.AppCompat">
+        <item name="android:layout_marginStart">@dimen/details_view_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/details_view_margin_end</item>
+        <item name="android:layout_marginTop">@dimen/details_view_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/details_view_margin_bottom</item>
+    </style>
+    
+    <style name="button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/buttonColor</item>
+    </style>
+
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+    </style>
+    
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/tab_text_size</item>
+    </style>
+
 </resources>
